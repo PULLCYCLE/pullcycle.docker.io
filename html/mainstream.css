@@ -1,0 +1,130 @@
+body {
+	background-image: url("../images/background.jpg");
+    left:0px;
+    top:0px;
+    background-size: 1920px;
+    background-repeat: no-repeat;
+}
+
+nav {
+	text-align: left;
+	padding-top:;
+	padding-left:3%;
+	font-size:14pt;
+	font-family: 'ZincoBlackCondensed';
+}
+
+.a{
+    padding-left: 50px;
+}
+
+a {
+	text-align: ;
+	color: white;
+	padding-top: 15px;
+	text-decoration: none;
+	
+}
+
+
+a:hover{
+	color: black;
+	transition: 1s linear;
+	text-decoration: underline;
+}
+
+.logo{
+	width: 130px;
+	height: 130px;
+	padding-left: 47%;
+}
+
+/*label {
+	text-align: right;
+	padding-right: 50px;
+}*/
+
+
+label.selectGeneral
+{
+    display: block;
+    position: relative;
+}
+
+label.selectGeneral:before
+{
+    content: attr(placeholder); 
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    max-width: 50%;
+
+    text-align: left;
+    white-space: nowrap; 
+
+    color: #adadad;
+
+    overflow-x: hidden; 
+}
+
+
+label.selectGeneral:after
+{
+    content: "<>";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    float: right;
+
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    transform: rotate(90deg);
+}
+
+label.selectGeneral input,
+label.selectGeneral label
+{
+    display: none;
+}
+
+label.selectGeneral div
+{
+    min-width: 70%;
+    max-height: 500px; 
+
+    overflow-x: hidden;
+}
+
+label.selectGeneral input[type="radio"]:checked ~ div
+{
+    position: absolute; 
+    top: <высота label.selectGeneral>; 
+
+    overflow-y: auto;
+}
+
+
+label.selectGeneral input[type="radio"]:checked ~ div > label,
+
+label.selectGeneral input[type="radio"]:checked + label
+{
+    display: block; 
+}
+
+
+label.selectGeneral input[type="radio"]:checked ~ div > label:hover
+{
+    background-color: #ffa834;
+}
+
+label.selectGeneral input[type="radio"]:not(:checked) ~ div > input[type="radio"]:checked + label
+{
+    position: relative;
+    z-index: -1; 
+}
